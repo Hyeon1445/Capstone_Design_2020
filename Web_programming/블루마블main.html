@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+<style>
+#ho:hover{
+transform:scale(1.1,1.1);
+}
+#ho1:hover{
+transform:scale(1.2,1.2);
+}
+</style>
+<title>FES 블루마블</title>
+</head>
+<body id="bb" onload="timer()" style="background-image:url('image/블루마블배경3.jpg');position;background-size:100% 100vh">
+<a href="main.html">
+<div id="ho" style="background-color:#db0000;position:absolute;right:0.5%;top:1%;height:25px;width:25px;border-style:solid;border-width:5px;border-color:white;border-radius:10%;text-align:center;color:white;font-size:20px;font-weight:bolder">X</div>
+</a>
+<div style="position:absolute;top:85vh;left:30%;width:40%;height:5vh;background-color:white;border-radius:20px;text-align:right;background-color:black;color:white;border-color:white;border-style:solid;border-width:2px;font-size:15px;font-weight:bolder;">
+<div id="loading" style="position:absolute;left:0.5%;top:10%;height:80%;width:50%;background-color:#db0000;border-radius:20px;color:white;font-size:15px;font-weight:bolder">Loading . . . &nbsp&nbsp</div>
+</div>
+<a href="블루마블.html">
+<div id="ho1" style="color:white;font-size:35px;font-weight:bolder;top:30vh;position:absolute;left:40%;width:20%;height:50px;text-align:center;display:none">GAME START</div>
+</a>
+<image id="img1" src="image/투명윤아.png" style="height:40vh;width:20%;position:absolute;left:15%;display:none"></image>
+<image id="img2" src="image/투명현지2.png" style="height:40vh;width:20%;position:absolute;right:17%;display:none"></image>
+<div id="txt1" style="color:#ffff99;font-size:20pt;top:10vh;left:45%;position:absolute;width:20%;height:50px;font-family:휴먼매직체;display:none">윤아와</div>
+<div id="txt2" style="color:#ffff99;font-size:20pt;top:10vh;left:50%;position:absolute;width:20%;height:50px;font-family:휴먼매직체;display:none">현지의</div>
+<div id="txt3" style="color:white;font-size:50pt;top:15vh;left:37%;position:absolute;width:60%;height:100px;font-family:휴먼매직체;display:none">S2VT세계여행</div>
+<script>
+function timer(){
+setTimeout(function(){ 
+document.getElementById("loading").style.width="70%";
+document.getElementById("img1").style.display="block";
+document.getElementById("txt1").style.display="block";
+ }, 1000);
+setTimeout(function(){ 
+document.getElementById("img2").style.display="block";
+document.getElementById("txt2").style.display="block";
+document.getElementById("loading").style.width="85%";
+ }, 2000);
+setTimeout(function(){ 
+document.getElementById("loading").style.width="93%";
+ }, 2500);
+setTimeout(function(){ 
+document.getElementById("loading").style.width="99%";
+document.getElementById("ho1").style.display="block";
+document.getElementById("txt3").style.display="block";
+document.getElementById("img1").style.transform="scale(1.2,1.2) rotate(-15deg)";
+document.getElementById("img2").style.transform="scale(1.2,1.2) rotate(15deg)";
+ }, 3000);
+}
+</script>
+
+</body>
+
+</html>

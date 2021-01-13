@@ -1,0 +1,700 @@
+<!DOCTYPE HTML>
+<head>
+<title>s2vt세계여행</title>
+<style>
+div{
+text-align:center;
+font-family:휴먼매직체;
+font-weight:bold;
+font-size:15pt
+}
+#ho:hover{
+transform:scale(1.1,1.1);
+}
+</style>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" margin="0">
+
+<a href="main.html">
+<div id="ho" style="background-color:#db0000;position:absolute;right:0.5%;top:1%;height:25px;width:25px;border-style:solid;border-width:5px;border-color:white;border-radius:10%;text-align:center;color:white;font-size:20px;font-weight:bolder;z-index:1000">X</div>
+</a>
+
+<div style="background-color:white;width:100%;height:100vh;">
+<video id="cmd" src="video/cmd3.mp4" style="width:100%;height:100vh;opacity:1;display:block;object-fit:fill;display:none"></video>
+<div style="width:80%;height:90vh;position:absolute;left:5%;top:5vh;">
+<div style="background-color:#b3a5e9;width:20%;height:25%;position:absolute;right:0%;bottom:0%;border-style:solid;border-width:0px;border-color:white;color:black;" onclick="opencaption(0)">U.S.A</div>
+<div style="background-color:#f0c2e2;width:20%;height:25%;position:absolute;right:20%;bottom:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(1)">SPAIN</div>
+<div style="background-color:#f9e8e7;width:20%;height:25%;position:absolute;right:40%;bottom:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(2)">JAPAN</div>
+<div style="background-color:#f0c2e2;width:20%;height:25%;position:absolute;right:60%;bottom:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(3)">AUSTRIA</div>
+
+<div style="background-color:#b3a5e9;width:20%;height:25%;position:absolute;left:0%;bottom:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(4)">U.S.A.</div>
+<div style="background-color:#f9e8e7;width:20%;height:25%;position:absolute;left:0%;bottom:25%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(5)">SPAIN</div>
+<div style="background-color:#f0c2e2;width:20%;height:25%;position:absolute;left:0%;bottom:50%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(6)">JAPAN</div>
+
+<div style="background-color:#b3a5e9;width:20%;height:25%;position:absolute;left:0%;top:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(7)">FRANCE</div>
+<div style="background-color:#f0c2e2;width:20%;height:25%;position:absolute;right:60%;top:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(8)">U.S.A.</div>
+<div style="background-color:#f9e8e7;width:20%;height:25%;position:absolute;right:40%;top:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(9)">PORTUGAL</div>
+<div style="background-color:#f0c2e2;width:20%;height:25%;position:absolute;right:20%;top:0%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(10)">CANADA</div>
+
+<div style="background-color:#b3a5e9;width:20%;height:25%;position:absolute;right:0%;top:0vh;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(11)">PORTUGAL</div>
+<div style="background-color:#f9e8e7;width:20%;height:25%;position:absolute;right:0%;bottom:50%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(12)">CANADA</div>
+<div style="background-color:#f0c2e2;width:20%;height:25%;position:absolute;right:0%;bottom:25%;border-style:solid;border-width:0px;border-color:white;color:black" onclick="opencaption(13)">HUNGARY</div>
+</div>
+</div>
+<image id="nya" src="image/투명윤아.png" style="width:25%;height:52vh;position:fixed;right:15%;top:50vh">
+<image id="lhj" src="image/투명현지2.png" style="width:25%;height:52vh;position:fixed;right:5%;top:50vh">
+
+<div id="dice1" onmouseover="diceho()" onmouseout="diceout()" onclick="clickdice()" style="width:100px;height:100px;position:absolute;top:30vh;right:4%;border-width:5px;border-style:solid;border-radius:20px;">
+<div id="d11" style="width:13px;height:13px;position:absolute;top:20%;left:20%;border-radius:50%;background-color:black"></div>
+<div id="d12" style="width:13px;height:13px;position:absolute;top:45%;left:45%;border-radius:50%;background-color:black"></div>
+<div id="d13" style="width:13px;height:13px;position:absolute;top:70%;left:20%;border-radius:50%;background-color:black"></div>
+<div id="d14" style="width:13px;height:13px;position:absolute;top:20%;right:20%;border-radius:50%;background-color:black"></div>
+<div id="d15" style="width:13px;height:13px;position:absolute;top:45%;right:80%;border-radius:50%;background-color:black;display:none"></div>
+<div id="d16" style="width:13px;height:13px;position:absolute;top:70%;right:20%;border-radius:50%;background-color:black"></div>
+</div>
+
+<div id="dice2" onmouseover="diceho()" onmouseout="diceout()" onclick="clickdice2()" style="width:100px;height:100px;position:absolute;top:30vh;right:4%;border-width:5px;border-style:solid;border-radius:20px;border-color:red;display:none">
+<div id="d21" style="width:13px;height:13px;position:absolute;top:20%;left:20%;border-radius:50%;background-color:red;display:none"></div>
+<div id="d22" style="width:13px;height:13px;position:absolute;top:45%;left:20%;border-radius:50%;background-color:red"></div>
+<div id="d23" style="width:13px;height:13px;position:absolute;top:70%;left:20%;border-radius:50%;background-color:red;display:none"></div>
+<div id="d24" style="width:13px;height:13px;position:absolute;top:20%;right:20%;border-radius:50%;background-color:red;display:none"></div>
+<div id="d25" style="width:13px;height:13px;position:absolute;top:45%;right:20%;border-radius:50%;background-color:red;"></div>
+<div id="d26" style="width:13px;height:13px;position:absolute;top:70%;right:20%;border-radius:50%;background-color:red;display:none"></div>
+</div>
+
+<div id="captioner" style="background-color:white;border-style:solid;border-width:5px;border-radius:20px;width:60%;height:60vh;position:fixed;top:20vh;left:15%;display:none">
+<image id="img" src="image/033.jpg" style="width:60%;height:80%;position:absolute;top:10%;left:5%">
+<div style="background-color:yellow;font-family:휴먼매직체;border-radius:20px;width:100%">S2VT Caption</div>
+<div id="caption" style="font-family:휴먼매직체;width:30%;position:absolute;right:5%;top:30%;text-align:Center">SPAIN<br><br>A woman is sitting<br> on the ground.</div>
+</div>
+
+<image src="image/fes2.png" style="position:fixed;bottom:10%;right:0%;width:10%;height:7%">
+
+<script>
+function diceho(){
+document.getElementById("dice1").style.transform="scale(1.1,1.1)"
+document.getElementById("dice2").style.transform="scale(1.1,1.1)"
+}
+function diceout(){
+document.getElementById("dice1").style.transform="scale(1,1)"
+document.getElementById("dice2").style.transform="scale(1,1)"
+}
+
+var blackdice1=1;
+var reddice=4;
+var yoona=0;
+var hyeonji=0;
+function clickdice(){
+blackdice1=Math.floor(Math.random()*6)+1;
+yoona=(yoona+blackdice1)%14;
+//window.alert('주사위'+blackdice1+'\nyoona'+yoona);
+document.getElementById("cmd").style.display="block";
+cmd.play();
+document.getElementById("dice1").style.display="none";
+setTimeout(function(){ 
+document.getElementById("cmd").style.display="none";
+document.getElementById("dice1").style.display="block";
+dicedisp1(blackdice1);
+ }, 5000);
+setTimeout(function(){ 
+moveyoona(yoona);
+ }, 5500);
+setTimeout(function(){ 
+opencaption(yoona);
+document.getElementById("dice1").style.display="none";
+document.getElementById("dice2").style.display="block";
+ }, 6000);
+}
+
+
+function clickdice2(){
+reddice=Math.floor(Math.random()*6)+1;
+hyeonji=(hyeonji+reddice)%14;
+//window.alert('주사위'+reddice+'\hyeonji'+hyeonji);
+document.getElementById("cmd").style.display="block";
+cmd.play();
+document.getElementById("dice2").style.display="none";
+setTimeout(function(){ 
+document.getElementById("cmd").style.display="none";
+document.getElementById("dice2").style.display="block";
+dicedisp2(reddice);
+ }, 5000);
+setTimeout(function(){ 
+movehyeonji(hyeonji);
+ }, 5500);
+setTimeout(function(){ 
+opencaption(hyeonji);
+document.getElementById("dice2").style.display="none";
+document.getElementById("dice1").style.display="block";
+ }, 6000);
+}
+
+function dicedisp1(blackdice1){
+if(blackdice1==1){
+dice11();
+}
+if(blackdice1==2){
+dice12();
+}
+if(blackdice1==3){
+dice13();
+}
+if(blackdice1==4){
+dice14();
+}
+if(blackdice1==5){
+dice15();
+}
+if(blackdice1==6){
+dice16();
+}
+}
+
+function dicedisp2(blackdice2){
+if(blackdice2==1){
+dice21();
+}
+if(blackdice2==2){
+dice22();
+}
+if(blackdice2==3){
+dice23();
+}
+if(blackdice2==4){
+dice24();
+}
+if(blackdice2==5){
+dice25();
+}
+if(blackdice2==6){
+dice26();
+}
+}
+
+function dice11(){
+document.getElementById("d11").style.display="none";
+document.getElementById("d12").style.display="block";
+document.getElementById("d13").style.display="none";
+document.getElementById("d14").style.display="none";
+document.getElementById("d15").style.display="none";
+document.getElementById("d16").style.display="none";
+//document.getElementById("d11").style.top="20%";
+document.getElementById("d12").style.top="45%";
+//document.getElementById("d13").style.top="70%";
+//document.getElementById("d14").style.top="20%";
+//document.getElementById("d15").style.top="45%";
+//document.getElementById("d16").style.top="70%";
+//document.getElementById("d11").style.left="20%";
+document.getElementById("d12").style.left="45%";
+//document.getElementById("d13").style.left="20%";
+//document.getElementById("d14").style.right="20%";
+//document.getElementById("d15").style.right="20%";
+//document.getElementById("d16").style.right="20%";
+}
+
+function dice12(){
+document.getElementById("d11").style.display="none";
+document.getElementById("d12").style.display="block";
+document.getElementById("d13").style.display="none";
+document.getElementById("d14").style.display="none";
+document.getElementById("d15").style.display="block";
+document.getElementById("d16").style.display="none";
+//document.getElementById("d11").style.top="20%";
+document.getElementById("d12").style.top="45%";
+//document.getElementById("d13").style.top="70%";
+//document.getElementById("d14").style.top="20%";
+document.getElementById("d15").style.top="45%";
+//document.getElementById("d16").style.top="70%";
+//document.getElementById("d11").style.left="20%";
+document.getElementById("d12").style.left="20%";
+//document.getElementById("d13").style.left="20%";
+//document.getElementById("d14").style.right="20%";
+document.getElementById("d15").style.right="20%";
+//document.getElementById("d16").style.right="20%";
+}
+
+function dice13(){
+document.getElementById("d11").style.display="block";
+document.getElementById("d12").style.display="block";
+document.getElementById("d13").style.display="none";
+document.getElementById("d14").style.display="none";
+document.getElementById("d15").style.display="none";
+document.getElementById("d16").style.display="block";
+document.getElementById("d11").style.top="20%";
+document.getElementById("d12").style.top="45%";
+//document.getElementById("d13").style.top="70%";
+//document.getElementById("d14").style.top="20%";
+//document.getElementById("d15").style.top="45%";
+document.getElementById("d16").style.top="70%";
+document.getElementById("d11").style.left="20%";
+document.getElementById("d12").style.left="45%";
+//document.getElementById("d13").style.left="20%";
+//document.getElementById("d14").style.right="20%";
+//document.getElementById("d15").style.right="20%";
+document.getElementById("d16").style.right="20%";
+}
+
+function dice14(){
+document.getElementById("d11").style.display="block";
+document.getElementById("d12").style.display="none";
+document.getElementById("d13").style.display="block";
+document.getElementById("d14").style.display="block";
+document.getElementById("d15").style.display="none";
+document.getElementById("d16").style.display="block";
+document.getElementById("d11").style.top="20%";
+document.getElementById("d12").style.top="45%";
+document.getElementById("d13").style.top="70%";
+//document.getElementById("d14").style.top="20%";
+//document.getElementById("d15").style.top="45%";
+document.getElementById("d16").style.top="70%";
+document.getElementById("d11").style.left="20%";
+document.getElementById("d12").style.left="45%";
+document.getElementById("d13").style.left="20%";
+//document.getElementById("d14").style.right="20%";
+//document.getElementById("d15").style.right="20%";
+document.getElementById("d16").style.right="20%";
+}
+
+function dice15(){
+document.getElementById("d11").style.display="block";
+document.getElementById("d12").style.display="block";
+document.getElementById("d13").style.display="block";
+document.getElementById("d14").style.display="block";
+document.getElementById("d15").style.display="none";
+document.getElementById("d16").style.display="block";
+document.getElementById("d11").style.top="20%";
+document.getElementById("d12").style.top="45%";
+document.getElementById("d13").style.top="70%";
+document.getElementById("d14").style.top="20%";
+//document.getElementById("d15").style.top="45%";
+document.getElementById("d16").style.top="70%";
+document.getElementById("d11").style.left="20%";
+document.getElementById("d12").style.left="45%";
+document.getElementById("d13").style.left="20%";
+document.getElementById("d14").style.right="20%";
+//document.getElementById("d15").style.right="20%";
+document.getElementById("d16").style.right="20%";
+}
+
+function dice16(){
+document.getElementById("d11").style.display="block";
+document.getElementById("d12").style.display="block";
+document.getElementById("d13").style.display="block";
+document.getElementById("d14").style.display="block";
+document.getElementById("d15").style.display="block";
+document.getElementById("d16").style.display="block";
+document.getElementById("d11").style.top="20%";
+document.getElementById("d12").style.top="45%";
+document.getElementById("d13").style.top="70%";
+document.getElementById("d14").style.top="20%";
+document.getElementById("d15").style.top="45%";
+document.getElementById("d16").style.top="70%";
+document.getElementById("d11").style.left="20%";
+document.getElementById("d12").style.left="20%";
+document.getElementById("d13").style.left="20%";
+document.getElementById("d14").style.right="20%";
+document.getElementById("d15").style.right="20%";
+document.getElementById("d16").style.right="20%";
+}
+
+function dice21(){
+document.getElementById("d21").style.display="none";
+document.getElementById("d22").style.display="block";
+document.getElementById("d23").style.display="none";
+document.getElementById("d24").style.display="none";
+document.getElementById("d25").style.display="none";
+document.getElementById("d26").style.display="none";
+//document.getElementById("d21").style.top="20%";
+document.getElementById("d22").style.top="45%";
+//document.getElementById("d23").style.top="70%";
+//document.getElementById("d24").style.top="20%";
+//document.getElementById("d25").style.top="45%";
+//document.getElementById("d26").style.top="70%";
+//document.getElementById("d21").style.left="20%";
+document.getElementById("d22").style.left="45%";
+//document.getElementById("d23").style.left="20%";
+//document.getElementById("d24").style.right="20%";
+//document.getElementById("d25").style.right="20%";
+//document.getElementById("d26").style.right="20%";
+}
+
+function dice22(){
+document.getElementById("d21").style.display="none";
+document.getElementById("d22").style.display="block";
+document.getElementById("d23").style.display="none";
+document.getElementById("d24").style.display="none";
+document.getElementById("d25").style.display="block";
+document.getElementById("d26").style.display="none";
+//document.getElementById("d21").style.top="20%";
+document.getElementById("d22").style.top="45%";
+//document.getElementById("d23").style.top="70%";
+//document.getElementById("d24").style.top="20%";
+document.getElementById("d25").style.top="45%";
+//document.getElementById("d26").style.top="70%";
+//document.getElementById("d21").style.left="20%";
+document.getElementById("d22").style.left="20%";
+//document.getElementById("d23").style.left="20%";
+//document.getElementById("d24").style.right="20%";
+document.getElementById("d25").style.right="20%";
+//document.getElementById("d26").style.right="20%";
+}
+
+function dice23(){
+document.getElementById("d21").style.display="block";
+document.getElementById("d22").style.display="block";
+document.getElementById("d23").style.display="none";
+document.getElementById("d24").style.display="none";
+document.getElementById("d25").style.display="none";
+document.getElementById("d26").style.display="block";
+document.getElementById("d21").style.top="20%";
+document.getElementById("d22").style.top="45%";
+//document.getElementById("d23").style.top="70%";
+//document.getElementById("d24").style.top="20%";
+//document.getElementById("d25").style.top="45%";
+document.getElementById("d26").style.top="70%";
+document.getElementById("d21").style.left="20%";
+document.getElementById("d22").style.left="45%";
+//document.getElementById("d23").style.left="20%";
+//document.getElementById("d24").style.right="20%";
+//document.getElementById("d25").style.right="20%";
+document.getElementById("d26").style.right="20%";
+}
+
+function dice24(){
+document.getElementById("d21").style.display="block";
+document.getElementById("d22").style.display="none";
+document.getElementById("d23").style.display="block";
+document.getElementById("d24").style.display="block";
+document.getElementById("d25").style.display="none";
+document.getElementById("d26").style.display="block";
+document.getElementById("d21").style.top="20%";
+//document.getElementById("d22").style.top="45%";
+document.getElementById("d23").style.top="70%";
+document.getElementById("d24").style.top="20%";
+//document.getElementById("d25").style.top="45%";
+document.getElementById("d26").style.top="70%";
+document.getElementById("d21").style.left="20%";
+//document.getElementById("d22").style.left="45%";
+document.getElementById("d23").style.left="20%";
+document.getElementById("d24").style.right="20%";
+//document.getElementById("d25").style.right="20%";
+document.getElementById("d26").style.right="20%";
+}
+
+function dice25(){
+document.getElementById("d21").style.display="block";
+document.getElementById("d22").style.display="block";
+document.getElementById("d23").style.display="block";
+document.getElementById("d24").style.display="block";
+document.getElementById("d25").style.display="none";
+document.getElementById("d26").style.display="block";
+document.getElementById("d21").style.top="20%";
+document.getElementById("d22").style.top="45%";
+document.getElementById("d23").style.top="70%";
+document.getElementById("d24").style.top="20%";
+//document.getElementById("d25").style.top="45%";
+document.getElementById("d26").style.top="70%";
+document.getElementById("d21").style.left="20%";
+document.getElementById("d22").style.left="45%";
+document.getElementById("d23").style.left="20%";
+document.getElementById("d24").style.right="20%";
+//document.getElementById("d25").style.right="20%";
+document.getElementById("d26").style.right="20%";
+}
+
+function dice26(){
+document.getElementById("d21").style.display="block";
+document.getElementById("d22").style.display="block";
+document.getElementById("d23").style.display="block";
+document.getElementById("d24").style.display="block";
+document.getElementById("d25").style.display="block";
+document.getElementById("d26").style.display="block";
+document.getElementById("d21").style.top="20%";
+document.getElementById("d22").style.top="45%";
+document.getElementById("d23").style.top="70%";
+document.getElementById("d24").style.top="20%";
+document.getElementById("d25").style.top="45%";
+document.getElementById("d26").style.top="70%";
+document.getElementById("d21").style.left="20%";
+document.getElementById("d22").style.left="20%";
+document.getElementById("d23").style.left="20%";
+document.getElementById("d24").style.right="20%";
+document.getElementById("d25").style.right="20%";
+document.getElementById("d26").style.right="20%";
+}
+
+
+function moveyoona(yoona){
+if(yoona==0){
+document.getElementById("nya").style.right="10%";
+document.getElementById("nya").style.top="50vh";
+}
+if(yoona==1){
+document.getElementById("nya").style.right="26%";
+document.getElementById("nya").style.top="50vh";
+}
+if(yoona==2){
+document.getElementById("nya").style.right="43%";
+document.getElementById("nya").style.top="50vh";
+}
+if(yoona==3){
+document.getElementById("nya").style.right="58%";
+document.getElementById("nya").style.top="50vh";
+}
+if(yoona==4){
+document.getElementById("nya").style.right="74%";
+document.getElementById("nya").style.top="50vh";
+}
+if(yoona==5){
+document.getElementById("nya").style.right="74%";
+document.getElementById("nya").style.top="30vh";
+}
+if(yoona==6){
+document.getElementById("nya").style.right="74%";
+document.getElementById("nya").style.top="10vh";
+}
+if(yoona==7){
+document.getElementById("nya").style.right="74%";
+document.getElementById("nya").style.top="-10vh";
+}
+if(yoona==8){
+document.getElementById("nya").style.right="58%";
+document.getElementById("nya").style.top="-10vh";
+}
+if(yoona==9){
+document.getElementById("nya").style.right="42%";
+document.getElementById("nya").style.top="-10vh";
+}
+if(yoona==10){
+document.getElementById("nya").style.right="26%";
+document.getElementById("nya").style.top="-10vh";
+}
+if(yoona==11){
+document.getElementById("nya").style.right="10%";
+document.getElementById("nya").style.top="-10vh";
+}
+if(yoona==12){
+document.getElementById("nya").style.right="10%";
+document.getElementById("nya").style.top="10vh";
+}
+if(yoona==13){
+document.getElementById("nya").style.right="10%";
+document.getElementById("nya").style.top="30vh";
+}
+}
+
+
+function movehyeonji(hyeonji){
+if(hyeonji==0){
+document.getElementById("lhj").style.right="10%";
+document.getElementById("lhj").style.top="50vh";
+}
+if(hyeonji==1){
+document.getElementById("lhj").style.right="26%";
+document.getElementById("lhj").style.top="50vh";
+}
+if(hyeonji==2){
+document.getElementById("lhj").style.right="43%";
+document.getElementById("lhj").style.top="50vh";
+}
+if(hyeonji==3){
+document.getElementById("lhj").style.right="58%";
+document.getElementById("lhj").style.top="50vh";
+}
+if(hyeonji==4){
+document.getElementById("lhj").style.right="74%";
+document.getElementById("lhj").style.top="50vh";
+}
+if(hyeonji==5){
+document.getElementById("lhj").style.right="74%";
+document.getElementById("lhj").style.top="30vh";
+}
+if(hyeonji==6){
+document.getElementById("lhj").style.right="74%";
+document.getElementById("lhj").style.top="10vh";
+}
+if(hyeonji==7){
+document.getElementById("lhj").style.right="74%";
+document.getElementById("lhj").style.top="-10vh";
+}
+if(hyeonji==8){
+document.getElementById("lhj").style.right="58%";
+document.getElementById("lhj").style.top="-10vh";
+}
+if(hyeonji==9){
+document.getElementById("lhj").style.right="42%";
+document.getElementById("lhj").style.top="-10vh";
+}
+if(hyeonji==10){
+document.getElementById("lhj").style.right="26%";
+document.getElementById("lhj").style.top="-10vh";
+}
+if(hyeonji==11){
+document.getElementById("lhj").style.right="10%";
+document.getElementById("lhj").style.top="-10vh";
+}
+if(hyeonji==12){
+document.getElementById("lhj").style.right="10%";
+document.getElementById("lhj").style.top="10vh";
+}
+if(hyeonji==13){
+document.getElementById("lhj").style.right="10%";
+document.getElementById("lhj").style.top="30vh";
+}
+}
+
+function opencaption(num){
+var msg = new SpeechSynthesisUtterance();
+msg.lang = 'en-US';
+msg.rate = 1.5;    
+msg.pitch = 1.5;      
+function setLang(langTxt){
+msg.lang = langTxt;
+}
+if(num==0){
+document.getElementById("img").src="image/1.JPEG";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="U.S.A. : A woman is talking on a table."
+msg.text = "A woman is talking on a table.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==1){
+document.getElementById("img").src="image/30.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="SPAIN : A woman is sitting on the ground."
+msg.text = "A woman is sitting on the ground.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==2){
+document.getElementById("img").src="image/1.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="JAPAN : A woman is walking on a wooden board."
+msg.text = "A woman is walking on a wooden board.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==3){
+document.getElementById("img").src="image/042.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="AUSTRIA : A group of people are playing."
+msg.text = "A group of people are playing.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==4){
+document.getElementById("img").src="image/2.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="U.S.A. : A group of people are playing."
+msg.text = "A group of people are playing.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+
+if(num==5){
+document.getElementById("img").src="image/109.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="SPAIN : A woman is sitting on the ground."
+msg.text = "A woman is sitting on the ground.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==6){
+document.getElementById("img").src="image/7.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="JAPAN : A woman is watching it."
+msg.text = "A woman is watching it.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==7){
+document.getElementById("img").src="image/139.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="FRANCE : A woman is sitting down."
+msg.text = "A woman is sitting down.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==8){
+document.getElementById("img").src="image/12.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="U.S.A. : A group of people are walking in a wooden board."
+msg.text = "A group of people are walking in a wooden board.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==9){
+document.getElementById("img").src="image/121.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="PORTUGAL : A woman is walking in the ground."
+msg.text = "A woman is walking in the ground.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==10){
+document.getElementById("img").src="image/14.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="CANADA : A group of people are playing."
+msg.text = "A group of people are playing.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==11){
+document.getElementById("img").src="image/146.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="PORTUGAL : A woman is sitting on the ground."
+msg.text = "A woman is sitting on the ground.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==12){
+document.getElementById("img").src="image/222.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="CANADA : A woman is standing in a wooden board."
+msg.text = "A woman is standing in a wooden board..";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+if(num==13){
+document.getElementById("img").src="image/128.jpg";
+document.getElementById("captioner").style.display="block";
+document.getElementById("caption").innerHTML="HUNGARY : A woman is walking on a roof."
+msg.text = "A woman is walking on a roof.";
+speechSynthesis.speak(msg);
+setTimeout(function(){ 
+document.getElementById("captioner").style.display="none";
+ }, 2500);
+}
+}
+
+
+</script>
+</body>
+</html>

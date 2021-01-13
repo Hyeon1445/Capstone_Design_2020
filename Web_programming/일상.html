@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#membar {
+margin: 0;
+}
+a {
+text-decoration: none;
+color: black;
+}
+.menu ul,
+.menu .menu ul {
+list-style: none;
+padding: 0;
+}
+.menu li {
+float: left;
+width: 100%;         
+text-align: center;
+}
+div.menu div.menu {
+display: none;
+}        
+div.menu li:hover div.menu {
+display: block;
+}
+div.menu li{
+background-color:white;
+color:black;
+}
+div.menu li:hover{
+background-color: white;
+color:black;
+}
+#orange:hover{
+color:orange;
+font-weight: bold;
+text-decoration:underline;
+}
+#s2vt1{
+width:90%;
+height:70vh;
+position:fixed;
+top:10%;
+left:5%;
+display:none;
+z-index:1000;
+}
+#s2vt2{
+width:90%;
+height:70vh;
+position:fixed;
+top:10%;
+left:5%;
+display:none;
+z-index:1000;
+}
+#s2vt3{
+width:90%;
+height:70vh;
+position:fixed;
+top:10%;
+left:5%;
+display:none;
+z-index:1000;
+}
+</style>
+<title>FES</title>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" margin="0">
+<div id="membar" class="menu" style="width:100%;position:absolute;top:-15px;z-index:1000;">
+<ul>
+<li>
+<table width="100%" height="60px" class="bw" style="text-align:left;" border="0">
+<tr>
+<td style="font-size:50px" width="30%">
+<a href="main.html">
+&nbsp<image src="image/투명집.png" width="30px" height="50px"></a>
+<b>FES</b>
+</td>
+<td style="text-align:center" width="8%"><b>MAP</b></td>
+<td style="text-align:center" width="8%"><b>활용</b></td>
+<td style="text-align:center" width="8%"><b>Efforts</b></td>
+<td style="text-align:center" width="8%"><b>ERROR</b></td>
+<td style="text-align:center" width="8%"><b>S2VT</b></td>
+<td width="30%" style="text-align:right">
+<a href="member.html">
+<image src="image/투명사람.png" width="50px" height="50px">
+</a>
+</td>
+</tr>
+</table>
+
+<div class="menu">
+<ul>
+<li>
+<table width="100%" border="0" height="400px" style="color:black">
+<tr height="10%">
+<td width="30%" rowspan="9"><img src="image/지능기전.jpg" width="60%"height="60%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td width="30%"></td>
+</tr>
+<tr>
+<td style="text-align:center" width="8%">
+<a href ="sejongmap.html" id="orange">세종대학교</a></td>
+<td style="text-align:center" width="8%">
+<a href ="영화.html" id="orange">영화</a></td>
+<td style="text-align:center" width="8%">
+<a href ="#" id="orange">caffe</a></td>
+<td style="text-align:center" width="8%">
+<a href ="#" id="orange">ERROR1</a></td>
+<td style="text-align:center" width="8%" >
+<a href ="https://vsubhashini.github.io/s2vt.html" target="blank" id="orange">홈페이지</a></td>
+<td width="30%"></td>
+</tr>
+<tr>
+<td style="text-align:center" width="8%" >
+<a href ="AI센터.html" id="orange">AI센터</a></td>
+<td style="text-align:center" width="8%">
+<a href ="블루마블main.html" id="orange">세계여행</a></td>
+<td style="text-align:center" width="8%">
+<a href ="#" id="orange">Captioner</a></td>
+<td style="text-align:center" width="8%">
+<a href ="#" id="orange">ERROR2</a></td>
+<td style="text-align:center" width="8%">
+<a href ="https://github.com/vsubhashini/caffe/tree/recurrent/examples/s2vt" target="blank" id="orange">Git</td>
+<td width="30%"></td>
+</tr>
+<tr>
+<td style="text-align:center" width="8%">
+<a href ="광개토관.html" id="orange">광개토관</a></td>
+<td style="text-align:center" width="8%">
+<a href ="TOEIC.html" id="orange">TOEIC</a></td>
+<td style="text-align:center" width="8%">
+<a href ="#" id="orange">Feature</a></td>
+<td style="text-align:center" width="8%">
+<a href ="#" id="orange">ERROR3</a></td>
+<td style="text-align:center" width="8%"></td>
+<td width="30%"></td>
+</tr>
+<tr>
+<td style="text-align:center" width="8%">
+<a href ="학술정보원.html" target="blank" id="orange">학술정보원</a></td>
+<td style="text-align:center" width="8%" >
+<a href ="일상.html" id="orange">일상</a></td>
+<td style="text-align:center" width="8%">
+<a href ="#" target="blank" id="orange">WEB</a></td>
+<td style="text-align:center" width="8%" ></td>
+<td style="text-align:center" width="8%"></td>
+<td width="30%"></td>
+</tr>
+<tr>
+<td style="text-align:center" width="8%" >
+<a href ="진관홀.html" id="orange">진관홀</a></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td width="30%"></td>
+</tr>
+<tr height="8%">
+<td style="text-align:center" width="8%">
+<a href ="운동장.html" id="orange">운동장</a></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td width="30%"></td>
+</tr>
+<tr height="8%">
+<td style="text-align:center" width="8%">
+<a href ="기타.html" id="orange">기타</a></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td width="30%"></td>
+</tr>
+<tr height="24%">
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td style="text-align:center" width="8%"></td>
+<td width="30%"></td>
+</tr>
+</table>
+</li>
+</ul>
+<div class="clear"></div>
+</div>
+</li>
+</ul>
+</div>
+
+
+<image src="image/기타.jpg" width="100%" style="position:absolute;top:60px;right:0;height:100vh;opacity:0.3">
+<div style="position:absolute;top:50vh;left:10%;height:70vh;width:80%;background-color:white">
+<video id="vid1" src="video/piano.mp4" style="position:absolute;top:2%;left:1%;width:69%;height:96%;object-fit:fill" muted></video>
+<div style="position:absolute;top:2%;right:1%;width:29%;height:96%;background-color:black;color:white">
+<center><h2>S2VT Caption</h2></center>
+<div id="sent1" style="position:absolute;top:30%;left:0%;width:100%;color:white;text-align:center;color:gray;opacity:0"><비디오 재생 중></div>
+<div id="sent2" style="position:absolute;top:40%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent3" style="position:absolute;top:45%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent4" style="position:absolute;top:50%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent5" style="position:absolute;top:55%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent6" style="position:absolute;top:60%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent7" style="position:absolute;top:70%;left:0%;width:100%;color:gray;text-align:center"></div>
+<image src="results/piano.jpg" style="width:80%;height:20%;position:absolute;bottom:2%;left:10%;" onmouseover="msover1()" onmouseout="msout1()">
+</div>
+</div>
+<div style="background-image:url('image/재생.jpg');background-size:cover;z-indez:500;width:50px;height:50px;position:absolute;top:110vh;left:13%;border-radius:100%" onclick="play1()"></div>
+<image src="results/piano.jpg" id="s2vt1"></image>
+
+<div style="position:absolute;top:130vh;left:10%;height:70vh;width:80%;background-color:white">
+<video id="vid2" src="video/guitar.mp4" style="position:absolute;top:2%;left:1%;width:69%;height:96%;object-fit:fill" muted></video>
+<div style="position:absolute;top:2%;right:1%;width:29%;height:96%;background-color:black;color:white">
+<center><h2>S2VT Caption</h2></center>
+<div id="sent21" style="position:absolute;top:30%;left:0%;width:100%;color:white;text-align:center;color:gray;opacity:0"><비디오 재생 중></div>
+<div id="sent22" style="position:absolute;top:40%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent23" style="position:absolute;top:45%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent24" style="position:absolute;top:50%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent25" style="position:absolute;top:55%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent26" style="position:absolute;top:60%;left:0%;width:100%;color:white;font-size:13pt;font-weight:bold"></div>
+<div id="sent27" style="position:absolute;top:70%;left:0%;width:100%;color:gray;text-align:center"></div>
+<image src="results/guitar.jpg" style="width:80%;height:20%;position:absolute;bottom:2%;left:10%;" onmouseover="msover2()" onmouseout="msout2()">
+</div>
+</div>
+<div style="background-image:url('image/재생.jpg');background-size:cover;z-indez:500;width:50px;height:50px;position:absolute;top:190vh;left:13%;border-radius:100%" onclick="play2()"></div>
+<image src="results/guitar.jpg" id="s2vt2"></image>
+
+
+</body>
+
+<script>
+var msg = new SpeechSynthesisUtterance();
+msg.lang = 'en-US';
+msg.rate = 1.5;    
+msg.pitch = 1.5;      
+function setLang(langTxt){
+msg.lang = langTxt;
+}
+
+function play1(){
+document.getElementById("sent1").style.opacity="1"
+vid1.play();
+document.getElementById("sent2").innerHTML=""
+document.getElementById("sent3").innerHTML=""
+document.getElementById("sent4").innerHTML=""
+document.getElementById("sent5").innerHTML=""
+document.getElementById("sent6").innerHTML=""
+document.getElementById("sent7").innerHTML=""
+setTimeout(function(){ 
+document.getElementById("sent2").innerHTML="00:00 A large keyboard."
+msg.text = "A large keyboard.";
+speechSynthesis.speak(msg);
+ }, 100);
+setTimeout(function(){ 
+document.getElementById("sent3").innerHTML="00:01 A large woman is playing."
+msg.text = "A large woman is playing.";
+speechSynthesis.speak(msg);
+ }, 1000);
+setTimeout(function(){ 
+document.getElementById("sent4").innerHTML="00:04 A piano."
+msg.text = "A piano.";
+speechSynthesis.speak(msg);
+ }, 4000);
+setTimeout(function(){ 
+document.getElementById("sent5").innerHTML="00:05 A song."
+msg.text = "A song.";
+speechSynthesis.speak(msg);
+ }, 5000);
+setTimeout(function(){ 
+document.getElementById("sent7").innerHTML="<비디오 재생 끝>"
+document.getElementById("sent1").style.opacity="0"
+ }, 7500);
+}
+
+function play2(){
+document.getElementById("sent21").style.opacity="1"
+vid2.play();
+document.getElementById("sent22").innerHTML=""
+document.getElementById("sent23").innerHTML=""
+document.getElementById("sent24").innerHTML=""
+document.getElementById("sent25").innerHTML=""
+document.getElementById("sent26").innerHTML=""
+document.getElementById("sent27").innerHTML=""
+setTimeout(function(){ 
+document.getElementById("sent22").innerHTML="00:01 A young man is playing the guitar."
+msg.text = "A young man is playing the guitar.";
+speechSynthesis.speak(msg);
+ }, 1000);
+setTimeout(function(){ 
+document.getElementById("sent23").innerHTML="00:07 A young man is sitting."
+msg.text = "A young man is sitting.";
+speechSynthesis.speak(msg);
+ }, 7000);
+setTimeout(function(){ 
+document.getElementById("sent27").innerHTML="<비디오 재생 끝>"
+document.getElementById("sent21").style.opacity="0"
+ }, 20000);
+}
+
+function msover1(){
+document.getElementById("s2vt1").style.display="block";
+}
+function msout1(){
+document.getElementById("s2vt1").style.display="none";
+}
+
+
+function msover2(){
+document.getElementById("s2vt2").style.display="block";
+}
+function msout2(){
+document.getElementById("s2vt2").style.display="none";
+}
+
+
+function msover3(){
+document.getElementById("s2vt3").style.display="block";
+}
+function msout3(){
+document.getElementById("s2vt3").style.display="none";
+}
+</script>
+</html>
