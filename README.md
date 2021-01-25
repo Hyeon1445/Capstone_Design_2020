@@ -130,7 +130,7 @@ S2VT를 재밌게 활용할 수 있는 방안으로 여행에서 직접 찍은 �
 
 ***
 
-### 2020 Capstone Design 발표 및 시연 영상
+### 2020 Capstone Design 발표 및 시연 영상(노윤아,이현지)
 
 <https://www.youtube.com/watch?v=URbBxMFpzMo&t=21s>
 
